@@ -1,0 +1,51 @@
+html {
+	font-family: Verdana, Lucida Sans Unicode, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#outer-container {
+	width: 750px;
+	margin: 0 auto;
+}
+
+#header {
+	width: 750px;
+	height: 60px;
+	background-color: #3366FF;
+}
+
+#footer {
+	width: 730px;
+}
+
+#content-container {
+	/*width: 496px;*/
+	/*height: 400px;*/
+	/*min-height: 600px*;*/
+	height:auto !important;
+	margin: 2px 0px 2px 0px;
+}
+
+#targetDiv {
+	font-size: 28px; z-index: 4; width: 133px; color: #ffffff; align: center
+}
+
+input.name {
+	font-size: 18px
+}
+
+.red-box {
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+	background-color: #F7E3E8 !important;
+	background: url('images/outer-background.png');
+}
+

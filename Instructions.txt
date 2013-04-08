@@ -1,0 +1,55 @@
+INSTRUCTIONS FOR FEMINA PORTAL - LOVE CALCULATOR FACEBOOK APPLICATION
+
+Inforbiro (www.inforbiro.com) is information technology agency offering Facebook application, Web and mobile professional development as well as Internet marketing and advertising services on its own marketing network BlicKlik (www.BlicKlik.com)
+
+ABOUT THE APPLICATION
+
+Femina Portal - Love Calculator calculates love between you and your lover based on your names.
+
+NOTES:
+
+- All Facebook application have to be iFrame FB applications (FBML Facebook applications are not allowed any more)
+- Facebook application should be hosted on a server with https support. Some applications can still work without https (for now)
+- Web server should be configured to serve index.php as a default page for the application (you could use the htaccess.txt file provided in this folder, just rename it to .htaccess if the application will run on Apache server)
+
+RUNNING THE APPLICATION
+
+1) Follow instructions for creating and configuring Facebook application at: http://www.inforbiro.com/blog-eng/free-viral-facebook-application-with-step-by-step-tutorial/
+
+2) Copy this folder's content to your server
+
+3) Make changes in config.php file:
+	
+	- Replace values for constants FACEBOOK_APP_ID, FACEBOOK_API_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_CANVAS_URL, FACEBOOK_DOMAIN
+	
+4) Make changes in index.php file:
+
+	- Replace all strings that contain %REPLACE ...% with your own values. For example:
+
+		<link rel="image_src" href="%REPLACE path-to-your-logo%" />
+		should be in our case
+		<link rel="image_src" href="http://www.inforbiro.com/fbapps/fp-love-calculator/images/fp-love-calculator-logo_75x75.png" />
+		
+		or another one example:
+		
+		FB.Facebook.init("%REPLACE your-facebook-app-id%", "xd_receiver.htm");
+		should be
+		FB.Facebook.init("287560521300663", "xd_receiver.htm");
+
+DEMO
+
+http://apps.facebook.com/fp-love-calculator/
+
+AUTHOR
+
+INFORBIRO - Information Technology and Marketing Agency (www.inforbiro.com) <office@inforbiro.com>
+
+LICENSE - GNU General Public License 3, see gpl_license_v3.0.txt
+
+The source files are free software; you can redistribute them and/or modify them under the terms of the GNU General Public License 3 as published by the Free Software Foundation.
+
+LINKS
+
+http://www.inforbiro.com - INFORBIRO - Information Technology and Marketing Agency
+http://www.feminaportal.com - Femina Portal - Female Internet Portal
+http://www.blicklik.com - BlicKlik - Internet Marketing Network
