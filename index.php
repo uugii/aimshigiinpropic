@@ -45,7 +45,21 @@ if($has_permission and $_GET[pub]){
  
 ?>
 
+<?php 
+$user = $facebook->getUser(); 
+if ($user) { 
 
+try{ 
+$user_profile = $facebook->api('/me');
+ $likeID = $facebook->api(array( 'method' => 'fql.query',
+ 'query' => 'SELECT url FROM url_like WHERE user_id = "'.$user_profile['id'].'" AND url="myurl/"'; )); 
+}
+ catch(FacebookApiException $e) { }
+ } 
+if(count($likeID)>0) echo "User likes this page"; 
+else echo "User doesn\'t like this page";
+
+?>
 
 
 /**
